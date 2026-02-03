@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Miles Per Gallon Calculator";
+}
+
+    <h1>Miles Per Gallon Calculator</h1>
+    <p>Calculate your miles per gallon! ⛽️</p>
+
+
+<form method="post">
+
+    <label>Miles Driven:</label>
+    <input type="number" step="any" name="MilesDriven" required />
+
+
+    <label>Gallons Used:</label>
+    <input type="number" step="any" name="GallonsUsed" required />
+
+
+    <button type="submit">Calculate MPG</button>
+
+</form>
+
+@if (Model.MPG > 0)
+{
+    <p>
+        <strong>Your Miles Per Gallon (MPG):</strong> @Model.MPG
+    </p>
+}
